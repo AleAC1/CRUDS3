@@ -3,7 +3,7 @@
 		public function IngresoC(){
 			if(isset($_POST["usuarioI"])){
 					try{
-						if($pdo = new PDO("mysql:host=localhost;dbname=biblioteca",$_POST["usuarioI"],$_POST["claveI"]))
+						if($pdo = new PDO("mysql:host=dbprjcomputacion.cuevafgehoh7.us-east-1.rds.amazonaws.com;dbname=biblioteca",$_POST["usuarioI"],$_POST["claveI"]))
 						{
 							session_start();
 							$_SESSION["Ingreso"] = true;
