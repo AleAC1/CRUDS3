@@ -32,7 +32,6 @@
 						<td>'.$value["observaciones"].'</td>
 						<td>'.$valorLibro["id_libro"].'</td>
 						<td>'.$valorControl["no_control"].'</td>
-						<td><a href="index.php?ruta=prestamoLibro&IDr='.$value["id_prestamo"].'"><button>Renovar</button></a></td>
 						<td><a href="index.php?ruta=editarPrestamoLibro&id='.$value["id_prestamo"].'"><button>Editar</button></a></td>
 						<td><a href="index.php?ruta=prestamoLibro&idB='.$value["id_prestamo"].'"><button>Borrar</button></a></td>
 					</tr>';
