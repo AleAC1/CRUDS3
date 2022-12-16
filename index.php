@@ -1,3 +1,4 @@
 <?php 
-header("mvc")
+  header("Location: mvc/index.php");
+  die();
 ?>
