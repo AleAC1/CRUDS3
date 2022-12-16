@@ -732,15 +732,15 @@ ALTER TABLE `prestamo`
   MODIFY `id_prestamo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 
-CREATE USER 'Administrador'@'localhost' IDENTIFIED BY 'Password123!';
+CREATE USER 'Administrador'@'%' IDENTIFIED BY 'Password123!';
 
-GRANT ALL PRIVILEGES ON `biblioteca`.* TO `Administrador`@`localhost` WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON `biblioteca`.* TO `Administrador`@`%` WITH GRANT OPTION;
 
-CREATE USER 'Bibliotecario'@'localhost' IDENTIFIED BY 'Biblioteca123!';
+CREATE USER 'Bibliotecario'@'%' IDENTIFIED BY 'Biblioteca123!';
 
-GRANT SELECT, INSERT, UPDATE, DELETE, REFERENCES, ALTER, CREATE VIEW, SHOW VIEW ON `biblioteca`.`prestamo` TO `Bibliotecario`@`localhost`;
+GRANT SELECT, INSERT, UPDATE, DELETE, REFERENCES, ALTER, CREATE VIEW, SHOW VIEW ON `biblioteca`.`prestamo` TO `Bibliotecario`@`%`;
 
-GRANT SELECT, INSERT, UPDATE, DELETE, REFERENCES, ALTER, CREATE VIEW, SHOW VIEW ON `biblioteca`.`multas` TO `Bibliotecario`@`localhost`;
+GRANT SELECT, INSERT, UPDATE, DELETE, REFERENCES, ALTER, CREATE VIEW, SHOW VIEW ON `biblioteca`.`multas` TO `Bibliotecario`@`%`;
 
 
 COMMIT;
